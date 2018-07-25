@@ -1,14 +1,14 @@
-# openSUSE docker image with MiKTeX test environment
+# openSUSE Leap 15 docker image with MiKTeX test environment
 
 ## Obtaining the image
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-opensuse:latest
+    docker pull miktex/miktex-test-opensuse:15
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-opensuse:latest .
+    docker build --tag miktex/miktex-test-opensuse:15 .
 
 ## Using the image
 
@@ -35,7 +35,7 @@ Run the tests:
     git clone https://github.com/MiKTeX/miktex-testing ~/work/miktex/test-suite
     docker run --rm -t \
       -v ~/work/miktex/test-suite:/miktex/test-suite:ro \
-      -v ~/work/miktex/tests/opensuse-latest:/miktex/test:rw \
+      -v ~/work/miktex/tests/opensuse-15:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-opensuse:latest
+      miktex/miktex-test-opensuse:15
