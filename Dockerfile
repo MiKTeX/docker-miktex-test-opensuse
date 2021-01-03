@@ -1,6 +1,6 @@
 FROM opensuse/leap:15
 
-LABEL Description="MiKTeX test environment, openSUSE Leap 15" Vendor="Christian Schenk" Version="2.9.6779"
+LABEL Description="MiKTeX test environment, openSUSE Leap 15" Vendor="Christian Schenk" Version="21.1"
 
 RUN    zypper update -y
 
@@ -9,6 +9,7 @@ RUN    zypper install -y \
            curl \
            ghostscript \
            gpg \
+           gzip \
            make \
            unzip \
            zip
