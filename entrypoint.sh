@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+zypper update -y
+
 if [ -d /miktex/build ]; then
     zypper --no-gpg-checks --non-interactive install /miktex/build/*.rpm
 else
