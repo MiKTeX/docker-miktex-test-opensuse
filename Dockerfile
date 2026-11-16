@@ -1,12 +1,13 @@
-FROM opensuse/leap:15
+FROM opensuse/leap:16
 
-LABEL Description="MiKTeX test environment, openSUSE Leap 15" Vendor="Christian Schenk" Version="24.12.22"
+LABEL Description="MiKTeX test environment, openSUSE Leap 16" Vendor="Christian Schenk" Version="26.11.16"
 
 RUN    zypper update -y
 
 RUN    zypper install -y \
            cmake \
            curl \
+           diff \
            ghostscript \
            gpg \
            gzip \
